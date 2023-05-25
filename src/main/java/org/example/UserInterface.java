@@ -182,7 +182,7 @@ public class UserInterface {
         System.out.print("Enter transaction type (sell/lease): ");
         String transactionType = scanner.nextLine();
 
-        Vehicle vehicle = dealership.getVehicleByvin(vehicleId);
+        Vehicle vehicle = dealership.getVin(vehicleId);
         if (vehicle != null) {
             Contract contract = new Contract(vehicle, customerName, customerAddress, customerPhoneNumber, transactionType);
             contractDataManager.addContract(contract);
